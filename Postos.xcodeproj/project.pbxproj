@@ -1,0 +1,578 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EF58044A1DE7FF9000CA79D1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5804491DE7FF9000CA79D1 /* main.m */; };
+		EF58044D1DE7FF9000CA79D1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF58044C1DE7FF9000CA79D1 /* AppDelegate.m */; };
+		EF5804531DE7FF9000CA79D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF5804511DE7FF9000CA79D1 /* Main.storyboard */; };
+		EF5804561DE7FF9000CA79D1 /* Postos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EF5804541DE7FF9000CA79D1 /* Postos.xcdatamodeld */; };
+		EF5804581DE7FF9000CA79D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF5804571DE7FF9000CA79D1 /* Assets.xcassets */; };
+		EF58045B1DE7FF9000CA79D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF5804591DE7FF9000CA79D1 /* LaunchScreen.storyboard */; };
+		EF5804661DE7FF9100CA79D1 /* PostosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5804651DE7FF9100CA79D1 /* PostosTests.m */; };
+		EF5804711DE7FF9100CA79D1 /* PostosUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5804701DE7FF9100CA79D1 /* PostosUITests.m */; };
+		EF5804831DE808B600CA79D1 /* PostosTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5804821DE808B600CA79D1 /* PostosTableViewController.m */; };
+		EF5804861DE8091300CA79D1 /* PostoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5804851DE8091300CA79D1 /* PostoTableViewCell.m */; };
+		EF5804881DE809E200CA79D1 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = EF5804871DE809E200CA79D1 /* Images */; };
+		EF58048D1DE80ECF00CA79D1 /* Posto.m in Sources */ = {isa = PBXBuildFile; fileRef = EF58048A1DE80ECF00CA79D1 /* Posto.m */; };
+		EF58048E1DE80ECF00CA79D1 /* PostoDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = EF58048C1DE80ECF00CA79D1 /* PostoDAO.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EF5804621DE7FF9100CA79D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF58043D1DE7FF9000CA79D1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF5804441DE7FF9000CA79D1;
+			remoteInfo = Postos;
+		};
+		EF58046D1DE7FF9100CA79D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF58043D1DE7FF9000CA79D1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF5804441DE7FF9000CA79D1;
+			remoteInfo = Postos;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EF5804451DE7FF9000CA79D1 /* Postos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Postos.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF5804491DE7FF9000CA79D1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EF58044B1DE7FF9000CA79D1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EF58044C1DE7FF9000CA79D1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EF5804521DE7FF9000CA79D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EF5804551DE7FF9000CA79D1 /* Postos.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Postos.xcdatamodel; sourceTree = "<group>"; };
+		EF5804571DE7FF9000CA79D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF58045A1DE7FF9000CA79D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EF58045C1DE7FF9000CA79D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF5804611DE7FF9100CA79D1 /* PostosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PostosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF5804651DE7FF9100CA79D1 /* PostosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostosTests.m; sourceTree = "<group>"; };
+		EF5804671DE7FF9100CA79D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF58046C1DE7FF9100CA79D1 /* PostosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PostosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF5804701DE7FF9100CA79D1 /* PostosUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostosUITests.m; sourceTree = "<group>"; };
+		EF5804721DE7FF9100CA79D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF5804811DE808B600CA79D1 /* PostosTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostosTableViewController.h; sourceTree = "<group>"; };
+		EF5804821DE808B600CA79D1 /* PostosTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostosTableViewController.m; sourceTree = "<group>"; };
+		EF5804841DE8091300CA79D1 /* PostoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostoTableViewCell.h; sourceTree = "<group>"; };
+		EF5804851DE8091300CA79D1 /* PostoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostoTableViewCell.m; sourceTree = "<group>"; };
+		EF5804871DE809E200CA79D1 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
+		EF5804891DE80ECF00CA79D1 /* Posto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Posto.h; sourceTree = "<group>"; };
+		EF58048A1DE80ECF00CA79D1 /* Posto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Posto.m; sourceTree = "<group>"; };
+		EF58048B1DE80ECF00CA79D1 /* PostoDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostoDAO.h; sourceTree = "<group>"; };
+		EF58048C1DE80ECF00CA79D1 /* PostoDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostoDAO.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF5804421DE7FF9000CA79D1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF58045E1DE7FF9100CA79D1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF5804691DE7FF9100CA79D1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EF58043C1DE7FF9000CA79D1 = {
+			isa = PBXGroup;
+			children = (
+				EF5804471DE7FF9000CA79D1 /* Postos */,
+				EF5804641DE7FF9100CA79D1 /* PostosTests */,
+				EF58046F1DE7FF9100CA79D1 /* PostosUITests */,
+				EF5804461DE7FF9000CA79D1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EF5804461DE7FF9000CA79D1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF5804451DE7FF9000CA79D1 /* Postos.app */,
+				EF5804611DE7FF9100CA79D1 /* PostosTests.xctest */,
+				EF58046C1DE7FF9100CA79D1 /* PostosUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF5804471DE7FF9000CA79D1 /* Postos */ = {
+			isa = PBXGroup;
+			children = (
+				EF58044B1DE7FF9000CA79D1 /* AppDelegate.h */,
+				EF58044C1DE7FF9000CA79D1 /* AppDelegate.m */,
+				EF5804811DE808B600CA79D1 /* PostosTableViewController.h */,
+				EF5804821DE808B600CA79D1 /* PostosTableViewController.m */,
+				EF5804841DE8091300CA79D1 /* PostoTableViewCell.h */,
+				EF5804851DE8091300CA79D1 /* PostoTableViewCell.m */,
+				EF5804891DE80ECF00CA79D1 /* Posto.h */,
+				EF58048A1DE80ECF00CA79D1 /* Posto.m */,
+				EF58048B1DE80ECF00CA79D1 /* PostoDAO.h */,
+				EF58048C1DE80ECF00CA79D1 /* PostoDAO.m */,
+				EF5804511DE7FF9000CA79D1 /* Main.storyboard */,
+				EF5804571DE7FF9000CA79D1 /* Assets.xcassets */,
+				EF5804591DE7FF9000CA79D1 /* LaunchScreen.storyboard */,
+				EF58045C1DE7FF9000CA79D1 /* Info.plist */,
+				EF5804541DE7FF9000CA79D1 /* Postos.xcdatamodeld */,
+				EF5804481DE7FF9000CA79D1 /* Supporting Files */,
+			);
+			path = Postos;
+			sourceTree = "<group>";
+		};
+		EF5804481DE7FF9000CA79D1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EF5804871DE809E200CA79D1 /* Images */,
+				EF5804491DE7FF9000CA79D1 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EF5804641DE7FF9100CA79D1 /* PostosTests */ = {
+			isa = PBXGroup;
+			children = (
+				EF5804651DE7FF9100CA79D1 /* PostosTests.m */,
+				EF5804671DE7FF9100CA79D1 /* Info.plist */,
+			);
+			path = PostosTests;
+			sourceTree = "<group>";
+		};
+		EF58046F1DE7FF9100CA79D1 /* PostosUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EF5804701DE7FF9100CA79D1 /* PostosUITests.m */,
+				EF5804721DE7FF9100CA79D1 /* Info.plist */,
+			);
+			path = PostosUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF5804441DE7FF9000CA79D1 /* Postos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF5804751DE7FF9100CA79D1 /* Build configuration list for PBXNativeTarget "Postos" */;
+			buildPhases = (
+				EF5804411DE7FF9000CA79D1 /* Sources */,
+				EF5804421DE7FF9000CA79D1 /* Frameworks */,
+				EF5804431DE7FF9000CA79D1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Postos;
+			productName = Postos;
+			productReference = EF5804451DE7FF9000CA79D1 /* Postos.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EF5804601DE7FF9100CA79D1 /* PostosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF5804781DE7FF9100CA79D1 /* Build configuration list for PBXNativeTarget "PostosTests" */;
+			buildPhases = (
+				EF58045D1DE7FF9100CA79D1 /* Sources */,
+				EF58045E1DE7FF9100CA79D1 /* Frameworks */,
+				EF58045F1DE7FF9100CA79D1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF5804631DE7FF9100CA79D1 /* PBXTargetDependency */,
+			);
+			name = PostosTests;
+			productName = PostosTests;
+			productReference = EF5804611DE7FF9100CA79D1 /* PostosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EF58046B1DE7FF9100CA79D1 /* PostosUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF58047B1DE7FF9100CA79D1 /* Build configuration list for PBXNativeTarget "PostosUITests" */;
+			buildPhases = (
+				EF5804681DE7FF9100CA79D1 /* Sources */,
+				EF5804691DE7FF9100CA79D1 /* Frameworks */,
+				EF58046A1DE7FF9100CA79D1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF58046E1DE7FF9100CA79D1 /* PBXTargetDependency */,
+			);
+			name = PostosUITests;
+			productName = PostosUITests;
+			productReference = EF58046C1DE7FF9100CA79D1 /* PostosUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF58043D1DE7FF9000CA79D1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = iesb;
+				TargetAttributes = {
+					EF5804441DE7FF9000CA79D1 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = Y6XNH7AXS2;
+						ProvisioningStyle = Automatic;
+					};
+					EF5804601DE7FF9100CA79D1 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = Y6XNH7AXS2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EF5804441DE7FF9000CA79D1;
+					};
+					EF58046B1DE7FF9100CA79D1 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = Y6XNH7AXS2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EF5804441DE7FF9000CA79D1;
+					};
+				};
+			};
+			buildConfigurationList = EF5804401DE7FF9000CA79D1 /* Build configuration list for PBXProject "Postos" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EF58043C1DE7FF9000CA79D1;
+			productRefGroup = EF5804461DE7FF9000CA79D1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF5804441DE7FF9000CA79D1 /* Postos */,
+				EF5804601DE7FF9100CA79D1 /* PostosTests */,
+				EF58046B1DE7FF9100CA79D1 /* PostosUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EF5804431DE7FF9000CA79D1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF5804881DE809E200CA79D1 /* Images in Resources */,
+				EF58045B1DE7FF9000CA79D1 /* LaunchScreen.storyboard in Resources */,
+				EF5804581DE7FF9000CA79D1 /* Assets.xcassets in Resources */,
+				EF5804531DE7FF9000CA79D1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF58045F1DE7FF9100CA79D1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF58046A1DE7FF9100CA79D1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF5804411DE7FF9000CA79D1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF5804861DE8091300CA79D1 /* PostoTableViewCell.m in Sources */,
+				EF58044D1DE7FF9000CA79D1 /* AppDelegate.m in Sources */,
+				EF5804831DE808B600CA79D1 /* PostosTableViewController.m in Sources */,
+				EF58048D1DE80ECF00CA79D1 /* Posto.m in Sources */,
+				EF58048E1DE80ECF00CA79D1 /* PostoDAO.m in Sources */,
+				EF58044A1DE7FF9000CA79D1 /* main.m in Sources */,
+				EF5804561DE7FF9000CA79D1 /* Postos.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF58045D1DE7FF9100CA79D1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF5804661DE7FF9100CA79D1 /* PostosTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF5804681DE7FF9100CA79D1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF5804711DE7FF9100CA79D1 /* PostosUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EF5804631DE7FF9100CA79D1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF5804441DE7FF9000CA79D1 /* Postos */;
+			targetProxy = EF5804621DE7FF9100CA79D1 /* PBXContainerItemProxy */;
+		};
+		EF58046E1DE7FF9100CA79D1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF5804441DE7FF9000CA79D1 /* Postos */;
+			targetProxy = EF58046D1DE7FF9100CA79D1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EF5804511DE7FF9000CA79D1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF5804521DE7FF9000CA79D1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EF5804591DE7FF9000CA79D1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF58045A1DE7FF9000CA79D1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EF5804731DE7FF9100CA79D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EF5804741DE7FF9100CA79D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EF5804761DE7FF9100CA79D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Y6XNH7AXS2;
+				INFOPLIST_FILE = Postos/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.iesb.posddm.Postos;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EF5804771DE7FF9100CA79D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Y6XNH7AXS2;
+				INFOPLIST_FILE = Postos/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.iesb.posddm.Postos;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		EF5804791DE7FF9100CA79D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = Y6XNH7AXS2;
+				INFOPLIST_FILE = PostosTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.iesb.posddm.PostosTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Postos.app/Postos";
+			};
+			name = Debug;
+		};
+		EF58047A1DE7FF9100CA79D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = Y6XNH7AXS2;
+				INFOPLIST_FILE = PostosTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.iesb.posddm.PostosTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Postos.app/Postos";
+			};
+			name = Release;
+		};
+		EF58047C1DE7FF9100CA79D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = Y6XNH7AXS2;
+				INFOPLIST_FILE = PostosUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.iesb.posddm.PostosUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Postos;
+			};
+			name = Debug;
+		};
+		EF58047D1DE7FF9100CA79D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = Y6XNH7AXS2;
+				INFOPLIST_FILE = PostosUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.iesb.posddm.PostosUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Postos;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF5804401DE7FF9000CA79D1 /* Build configuration list for PBXProject "Postos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF5804731DE7FF9100CA79D1 /* Debug */,
+				EF5804741DE7FF9100CA79D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF5804751DE7FF9100CA79D1 /* Build configuration list for PBXNativeTarget "Postos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF5804761DE7FF9100CA79D1 /* Debug */,
+				EF5804771DE7FF9100CA79D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EF5804781DE7FF9100CA79D1 /* Build configuration list for PBXNativeTarget "PostosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF5804791DE7FF9100CA79D1 /* Debug */,
+				EF58047A1DE7FF9100CA79D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EF58047B1DE7FF9100CA79D1 /* Build configuration list for PBXNativeTarget "PostosUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF58047C1DE7FF9100CA79D1 /* Debug */,
+				EF58047D1DE7FF9100CA79D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EF5804541DE7FF9000CA79D1 /* Postos.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EF5804551DE7FF9000CA79D1 /* Postos.xcdatamodel */,
+			);
+			currentVersion = EF5804551DE7FF9000CA79D1 /* Postos.xcdatamodel */;
+			path = Postos.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = EF58043D1DE7FF9000CA79D1 /* Project object */;
+}
