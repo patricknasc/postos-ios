@@ -32,6 +32,12 @@
     self.postoDao = [PostoDAO postoDaoInstance];
     
     
+    //TODO: Apagar! Populando temporariamente.
+    self.postos = [[NSArray alloc]init];
+    
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -119,6 +125,24 @@
 //    
 //    [self.navigationController pushViewController:form animated:YES];
     
+}
+
+
++ (void) logPosto:(Posto *)posto {
+    NSLog(@"%@",posto);
+
+}
+
+- (void) allPostos{
+    for(Posto *p in self.postos){
+        NSLog(@"%@",p);
+    }
+}
+
+- (void) addPosto:(Posto *)posto{
+    NSMutableArray *temp = [self.postos mutableCopy];
+    [temp addObject:posto];
+    self.postos = temp;
 }
 
 @end

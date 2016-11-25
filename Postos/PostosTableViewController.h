@@ -8,11 +8,17 @@
 
 #import <UIKit/UIKit.h>
 #import "PostoDAO.h"
+#import "Posto.h"
 
 @interface PostosTableViewController : UITableViewController
 
-@property NSMutableArray *postos;
+@property NSArray *postos;
 @property PostoDAO *postoDao;
 @property Posto *postoSelecionado;
+
+
++ (void) logPosto:(Posto *)posto;
+- (void) allPostos;
+- (void) addPosto:(Posto *)posto;
 
 @end
