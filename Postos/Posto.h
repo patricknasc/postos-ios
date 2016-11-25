@@ -10,15 +10,15 @@
 
 @interface Posto : NSObject
 
-@property NSString *preco_gasolina_comum;
-@property NSString *preco_gasolina_aditivada;
-@property NSString *preco_diesel;
-@property NSString *preco_etanol;
-@property NSString *nome_posto;
-@property NSString *bandeira_posto;
-@property NSString *endereco_posto;
-@property NSString *latitude_posto;
-@property NSString *longitude_posto;
+@property NSString *precoGasolinaComum;
+@property NSString *precoGasolinaAditivada;
+@property NSString *precoDiesel;
+@property NSString *precoEtanol;
+@property NSString *nomePosto;
+@property NSString *bandeiraPosto;
+@property NSString *enderecoPosto;
+@property NSString *latitudePosto;
+@property NSString *longitudePosto;
 
 
 @end

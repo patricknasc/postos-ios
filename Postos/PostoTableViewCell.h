@@ -10,7 +10,7 @@
 
 @interface PostoTableViewCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UIImageView *ImgBandeira;
+@property (weak, nonatomic) IBOutlet UIImageView *ImgBandeiraPosto;
 
 @property (weak, nonatomic) IBOutlet UILabel *LblNomePosto;
 

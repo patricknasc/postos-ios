@@ -10,6 +10,7 @@
 #import "PostoDAO.h"
 #import "Posto.h"
 
+
 @interface PostosTableViewController : UITableViewController
 
 @property NSArray *postos;

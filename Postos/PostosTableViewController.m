@@ -7,6 +7,7 @@
 //
 
 #import "PostosTableViewController.h"
+#import "PostoTableViewCell.h"
 
 @interface PostosTableViewController ()
 
@@ -35,7 +36,34 @@
     //TODO: Apagar! Populando temporariamente.
     self.postos = [[NSArray alloc]init];
     
+    Posto *p1 = [[Posto alloc] init];
+    Posto *p2 = [[Posto alloc] init];
     
+    
+    p1.precoGasolinaComum = @"3,00";
+    p1.precoGasolinaAditivada = @"4,00";
+    p1.precoDiesel = @"2,00";
+    p1.precoEtanol = @"1,00";
+    p1.nomePosto = @"Nome do Posto 1";
+    p1.bandeiraPosto = @"esso.png";
+    p1.enderecoPosto = @"Endereço do Posto 1";
+    p1.latitudePosto = @"1,000000";
+    p1.longitudePosto = @"2,000000";
+    
+    
+    p2.precoGasolinaComum = @"3,50";
+    p2.precoGasolinaAditivada = @"4,50";
+    p2.precoDiesel = @"2,50";
+    p2.precoEtanol = @"1,50";
+    p2.nomePosto = @"Nome do Posto 2";
+    p2.bandeiraPosto = @"br.png";
+    p2.enderecoPosto = @"Endereço do Posto 2";
+    p2.latitudePosto = @"1,500000";
+    p2.longitudePosto = @"2,500000";
+    
+    [self addPosto: p1];
+    [self addPosto: p2];
+
     
     
 }
@@ -48,24 +76,39 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+
+    return self.postos.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    //UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    static NSString *CellIdentifier = @"CellIdentifier";
+    PostoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    // Configure the cell...
+    int row = (int)[indexPath row];
+    NSLog(@">>%@", _postos[row]);
+    Posto *p = (Posto *)_postos[row];
+    
+    cell.LblPrecoGasolinaComum.text = p.precoGasolinaComum;
+    cell.LblPrecoGasolinaAditivada.text = p.precoGasolinaAditivada;
+    cell.LblPrecoDiesel.text = p.precoDiesel;
+    cell.LblPrecoEtanol.text = p.precoEtanol;
+    cell.LblNomePosto.text = p.nomePosto;
+    NSLog(@">>%@", p.nomePosto);
+    cell.LblEnderecoPosto.text = p.enderecoPosto;
+    //cell.ImgBandeiraPosto.image = [UIImage imageNamed:p.bandeiraPosto];
+    cell.ImgBandeiraPosto.image = [UIImage imageNamed:@"esso.png"];
+    NSLog(@">>%@", p.bandeiraPosto);
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
