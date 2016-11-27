@@ -28,4 +28,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *longitude_posto;
 
+
+
+
 @end

@@ -87,7 +87,7 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    //UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+   
     static NSString *CellIdentifier = @"CellIdentifier";
     PostoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
@@ -102,8 +102,7 @@
     cell.LblNomePosto.text = p.nomePosto;
     NSLog(@">>%@", p.nomePosto);
     cell.LblEnderecoPosto.text = p.enderecoPosto;
-    //cell.ImgBandeiraPosto.image = [UIImage imageNamed:p.bandeiraPosto];
-    cell.ImgBandeiraPosto.image = [UIImage imageNamed:@"esso.png"];
+    cell.ImgBandeiraPosto.image = [UIImage imageNamed: [NSString stringWithFormat:@"%@/%@", @"Images/", p.bandeiraPosto]];
     NSLog(@">>%@", p.bandeiraPosto);
     
     return cell;

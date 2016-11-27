@@ -123,6 +123,8 @@
 				EF5804821DE808B600CA79D1 /* PostosTableViewController.m */,
 				EF5804841DE8091300CA79D1 /* PostoTableViewCell.h */,
 				EF5804851DE8091300CA79D1 /* PostoTableViewCell.m */,
+				7FEA84DF1DE9B8050047CE84 /* PostoViewController.h */,
+				7FEA84E01DE9B8050047CE84 /* PostoViewController.m */,
 				EF5804891DE80ECF00CA79D1 /* Posto.h */,
 				EF58048A1DE80ECF00CA79D1 /* Posto.m */,
 				EF58048B1DE80ECF00CA79D1 /* PostoDAO.h */,
@@ -133,8 +135,6 @@
 				EF58045C1DE7FF9000CA79D1 /* Info.plist */,
 				EF5804541DE7FF9000CA79D1 /* Postos.xcdatamodeld */,
 				EF5804481DE7FF9000CA79D1 /* Supporting Files */,
-				7FEA84DF1DE9B8050047CE84 /* PostoViewController.h */,
-				7FEA84E01DE9B8050047CE84 /* PostoViewController.m */,
 			);
 			path = Postos;
 			sourceTree = "<group>";
