@@ -65,6 +65,61 @@
     [newPosto setValue:self.latitude_posto.text forKey:@"latitudePosto"];
     [newPosto setValue:self.longitude_posto.text forKey:@"longitudePosto"];
     
+    
+    
+    //Definição da bandeira do posto
+    if([[self.bandeira_posto.text lowercaseString] isEqualToString:@"ale"] ||
+       [[self.bandeira_posto.text lowercaseString] isEqualToString:@"posto ale"]){
+        
+        [newPosto setValue:@"ale" forKey:@"bandeiraPosto"];
+        
+    } else if([[self.bandeira_posto.text lowercaseString] isEqualToString:@"br"] ||
+       [[self.bandeira_posto.text lowercaseString] isEqualToString:@"posto br"] ||
+       [[self.bandeira_posto.text lowercaseString] isEqualToString:@"petrobras"] ||
+       [[self.bandeira_posto.text lowercaseString] isEqualToString:@"posto petrobras"]){
+        
+        [newPosto setValue:@"br" forKey:@"bandeiraPosto"];
+        
+    } else if([self.bandeira_posto.text isEqualToString:@""] ||
+       [[self.bandeira_posto.text lowercaseString] isEqualToString:@"branca"] ||
+       [[self.bandeira_posto.text lowercaseString] isEqualToString:@"bandeira branca"] ||
+       [[self.bandeira_posto.text lowercaseString] isEqualToString:@"sem bandeira"] ||
+       [[self.bandeira_posto.text lowercaseString] isEqualToString:@"posto sem bandeira"] ||
+       [[self.bandeira_posto.text lowercaseString] isEqualToString:@"vazia"]){
+        
+        [newPosto setValue:@"branca.png" forKey:@"bandeiraPosto"];
+        
+    } else if([[self.bandeira_posto.text lowercaseString] isEqualToString:@"esso"] ||
+       [[self.bandeira_posto.text lowercaseString] isEqualToString:@"posto esso"]){
+        
+        [newPosto setValue:@"esso" forKey:@"bandeiraPosto"];
+        
+    } else if([[self.bandeira_posto.text lowercaseString] isEqualToString:@"gasoline"] ||
+       [[self.bandeira_posto.text lowercaseString] isEqualToString:@"posto gasoline"]){
+        
+        [newPosto setValue:@"gasoline" forKey:@"bandeiraPosto"];
+        
+    } else if([[self.bandeira_posto.text lowercaseString] isEqualToString:@"ipiranga"] ||
+       [[self.bandeira_posto.text lowercaseString] isEqualToString:@"posto ipiranga"]){
+        
+        [newPosto setValue:@"ipiranga" forKey:@"bandeiraPosto"];
+        
+    } else if([[self.bandeira_posto.text lowercaseString] isEqualToString:@"shell"] ||
+       [[self.bandeira_posto.text lowercaseString] isEqualToString:@"posto shell"]){
+        
+        [newPosto setValue:@"shell" forKey:@"bandeiraPosto"];
+        
+    } else if([[self.bandeira_posto.text lowercaseString] isEqualToString:@"texaco"] ||
+       [[self.bandeira_posto.text lowercaseString] isEqualToString:@"posto texaco"]){
+        
+        [newPosto setValue:@"texaco" forKey:@"bandeiraPosto"];
+        
+    } else { //NDA
+        
+        [newPosto setValue:@"vazio" forKey:@"bandeiraPosto"];
+    }
+    
+    
     NSError *error = nil;
     
     if(![context save:&error]){

@@ -130,9 +130,12 @@
     [cell.LblNomePosto setText:[NSString stringWithFormat:@"%@", [posto valueForKey:@"nomePosto"]]];
     [cell.LblEnderecoPosto setText:[NSString stringWithFormat:@"%@", [posto valueForKey:@"enderecoPosto"]]];
     
+
     cell.ImgBandeiraPosto.image = [UIImage imageNamed: [NSString stringWithFormat:@"%@/%@%@", @"Images/", [posto valueForKey:@"bandeiraPosto"], @".png"]];
     
-  
+    NSLog(@">>%@", [posto valueForKey:@"bandeiraPosto"]);
+    NSLog(@">>>>>%@", [NSString stringWithFormat:@"%@%@%@", @"Images/", [posto valueForKey:@"bandeiraPosto"], @".png"]);
+    
    
 //    cell.ImgBandeiraPosto.image = [UIImage imageNamed: [NSString stringWithFormat:@"%@/%@", @"Images/", p.bandeiraPosto]];
 //    NSLog(@">>%@", p.bandeiraPosto);
