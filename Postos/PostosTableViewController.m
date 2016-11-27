@@ -49,39 +49,6 @@
     self.postoDao = [PostoDAO postoDaoInstance];
     
     
-    //TODO: Apagar! Populando temporariamente.
-    //self.postos = [[NSArray alloc]init];
-    
-    //Posto *p1 = [[Posto alloc] init];
-    //Posto *p2 = [[Posto alloc] init];
-    
-    
-//    p1.precoGasolinaComum = @"3,00";
-//    p1.precoGasolinaAditivada = @"4,00";
-//    p1.precoDiesel = @"2,00";
-//    p1.precoEtanol = @"1,00";
-//    p1.nomePosto = @"Nome do Posto 1";
-//    p1.bandeiraPosto = @"esso.png";
-//    p1.enderecoPosto = @"Endereço do Posto 1";
-//    p1.latitudePosto = @"1,000000";
-//    p1.longitudePosto = @"2,000000";
-//    
-//    
-//    p2.precoGasolinaComum = @"3,50";
-//    p2.precoGasolinaAditivada = @"4,50";
-//    p2.precoDiesel = @"2,50";
-//    p2.precoEtanol = @"1,50";
-//    p2.nomePosto = @"Nome do Posto 2";
-//    p2.bandeiraPosto = @"br.png";
-//    p2.enderecoPosto = @"Endereço do Posto 2";
-//    p2.latitudePosto = @"1,500000";
-//    p2.longitudePosto = @"2,500000";
-    
-//    [self addPosto: p1];
-//    [self addPosto: p2];
-
-    
-    
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -117,10 +84,6 @@
     static NSString *CellIdentifier = @"CellIdentifier";
     PostoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    //int row = (int)[indexPath row];
-    //NSLog(@">>%@", _postos[row]);
-    //Posto *p = (Posto *)_postos[row];
-    
     NSManagedObjectModel *posto = [self.postos objectAtIndex:indexPath.row];
     [cell.LblPrecoGasolinaComum setText:[NSString stringWithFormat:@"%@", [posto valueForKey:@"precoGasolinaComum"]]];
     [cell.LblPrecoGasolinaAditivada setText:[NSString stringWithFormat:@"%@", [posto valueForKey:@"precoGasolinaAditivada"]]];
@@ -136,9 +99,6 @@
     NSLog(@">>%@", [posto valueForKey:@"bandeiraPosto"]);
     NSLog(@">>>>>%@", [NSString stringWithFormat:@"%@%@%@", @"Images/", [posto valueForKey:@"bandeiraPosto"], @".png"]);
     
-   
-//    cell.ImgBandeiraPosto.image = [UIImage imageNamed: [NSString stringWithFormat:@"%@/%@", @"Images/", p.bandeiraPosto]];
-//    NSLog(@">>%@", p.bandeiraPosto);
     
     return cell;
 }
@@ -218,9 +178,6 @@
         PostoViewController *PostoAddView = segue.destinationViewController;
         //PostoAddView.posto = SelectedPosto;
     }
-    
-    
-    
     
     
 }
