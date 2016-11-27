@@ -23,6 +23,8 @@
 		EF58048D1DE80ECF00CA79D1 /* Posto.m in Sources */ = {isa = PBXBuildFile; fileRef = EF58048A1DE80ECF00CA79D1 /* Posto.m */; };
 		EF58048E1DE80ECF00CA79D1 /* PostoDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = EF58048C1DE80ECF00CA79D1 /* PostoDAO.m */; };
 		EF5804941DEB13EB00CA79D1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF5804931DEB13EB00CA79D1 /* CoreData.framework */; };
+		EF58051A1DEBA30800CA79D1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF5805191DEBA30800CA79D1 /* MapKit.framework */; };
+		EF58051D1DEBA50A00CA79D1 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF58051C1DEBA50A00CA79D1 /* MapViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,9 @@
 		EF58048B1DE80ECF00CA79D1 /* PostoDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostoDAO.h; sourceTree = "<group>"; };
 		EF58048C1DE80ECF00CA79D1 /* PostoDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostoDAO.m; sourceTree = "<group>"; };
 		EF5804931DEB13EB00CA79D1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		EF5805191DEBA30800CA79D1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		EF58051B1DEBA50A00CA79D1 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		EF58051C1DEBA50A00CA79D1 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF58051A1DEBA30800CA79D1 /* MapKit.framework in Frameworks */,
 				EF5804941DEB13EB00CA79D1 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -142,6 +148,8 @@
 				EF5804851DE8091300CA79D1 /* PostoTableViewCell.m */,
 				7FEA84DF1DE9B8050047CE84 /* PostoViewController.h */,
 				7FEA84E01DE9B8050047CE84 /* PostoViewController.m */,
+				EF58051B1DEBA50A00CA79D1 /* MapViewController.h */,
+				EF58051C1DEBA50A00CA79D1 /* MapViewController.m */,
 				EF5804891DE80ECF00CA79D1 /* Posto.h */,
 				EF58048A1DE80ECF00CA79D1 /* Posto.m */,
 				EF58048B1DE80ECF00CA79D1 /* PostoDAO.h */,
@@ -186,6 +194,7 @@
 		EF5804921DEB13EB00CA79D1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EF5805191DEBA30800CA79D1 /* MapKit.framework */,
 				EF5804931DEB13EB00CA79D1 /* CoreData.framework */,
 			);
 			name = Frameworks;
@@ -260,6 +269,11 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = Y6XNH7AXS2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					EF5804601DE7FF9100CA79D1 = {
 						CreatedOnToolsVersion = 8.0;
@@ -335,6 +349,7 @@
 				7FEA84E11DE9B8050047CE84 /* PostoViewController.m in Sources */,
 				EF58048E1DE80ECF00CA79D1 /* PostoDAO.m in Sources */,
 				EF58044A1DE7FF9000CA79D1 /* main.m in Sources */,
+				EF58051D1DEBA50A00CA79D1 /* MapViewController.m in Sources */,
 				7F9C29B51DEB81D4002C176D /* TempoViewController.m in Sources */,
 				EF5804561DE7FF9000CA79D1 /* Postos.xcdatamodeld in Sources */,
 			);
