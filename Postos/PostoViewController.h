@@ -28,6 +28,9 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *longitude_posto;
 
+- (IBAction)saveData:(id)sender;
+
+- (IBAction)DismissKeyboard:(id)sender;
 
 
 

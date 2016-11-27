@@ -34,4 +34,9 @@
 }
 */
 
+- (IBAction)saveData:(id)sender {
+}
+
+- (IBAction)DismissKeyboard:(id)sender {
+}
 @end
