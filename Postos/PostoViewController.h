@@ -22,11 +22,16 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *bandeira_posto;
 
+@property (weak, nonatomic) IBOutlet UIImageView *logo_posto;
+
 @property (weak, nonatomic) IBOutlet UITextField *endereco_posto;
 
 @property (weak, nonatomic) IBOutlet UILabel *latitude_posto;
 
 @property (weak, nonatomic) IBOutlet UILabel *longitude_posto;
+
+
+
 
 @property (strong) NSManagedObjectModel * posto;
 

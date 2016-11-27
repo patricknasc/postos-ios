@@ -128,6 +128,7 @@
                                     <outlet property="LblPrecoEtanol" destination="N2u-eq-wFK" id="uME-9l-LNa"/>
                                     <outlet property="LblPrecoGasolinaAditivada" destination="Wor-tq-Chv" id="LMN-DD-ELn"/>
                                     <outlet property="LblPrecoGasolinaComum" destination="OcA-3p-C4I" id="8Qq-me-Kwq"/>
+                                    <segue destination="lgN-tz-TWc" kind="show" identifier="UpdatePosto" id="u5Q-20-0Oe"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -410,8 +411,11 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="bandeira_posto" destination="YJr-Yc-ryg" id="3zQ-vl-kxc"/>
+                        <outlet property="bandeira_posto" destination="YJr-Yc-ryg" id="c0i-AD-cuB"/>
                         <outlet property="endereco_posto" destination="g3X-y0-1e0" id="qhS-8h-2PP"/>
+                        <outlet property="latitude_posto" destination="Jop-ZH-zkP" id="DiN-A4-zdf"/>
+                        <outlet property="logo_posto" destination="Jko-Cc-s1f" id="YOD-73-dcb"/>
+                        <outlet property="longitude_posto" destination="Kfd-s9-Ujn" id="Ua4-xC-URk"/>
                         <outlet property="nome_posto" destination="HuY-SF-YwX" id="koQ-p8-6ae"/>
                         <outlet property="preco_diesel" destination="Olm-iD-bhb" id="pb2-KK-vAv"/>
                         <outlet property="preco_etanol" destination="Hxc-AS-FjQ" id="eV0-yH-YCZ"/>
@@ -535,4 +539,7 @@
             <point key="canvasLocation" x="109.59999999999999" y="224.4377811094453"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="u5Q-20-0Oe"/>
+    </inferredMetricsTieBreakers>
 </document>

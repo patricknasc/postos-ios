@@ -174,9 +174,9 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
     if ([[segue identifier] isEqualToString:@"UpdatePosto"]) {
-        NSManagedObjectModel *SelectedPosto = [self.postos objectAtIndex:[[self.tableView indexPathForSelectedRow] row]];
-        PostoViewController *PostoAddView = segue.destinationViewController;
-        //PostoAddView.posto = SelectedPosto;
+        NSManagedObjectModel *selectedPosto = [self.postos objectAtIndex:[[self.tableView indexPathForSelectedRow] row]];
+        PostoViewController *postoAddView = segue.destinationViewController;
+        postoAddView.posto = selectedPosto;
     }
     
     
