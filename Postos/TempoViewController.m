@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.navigationItem.title = @"Previsão do Tempo";
     
     NSString *urlStringCondicao = [NSString stringWithFormat:@"https://api.wunderground.com/api/d47ade75cf6c5a32/conditions/lang:BR/q/-26.825137,-49.269520.json"];
     
