@@ -21,6 +21,7 @@
 		EF5804881DE809E200CA79D1 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = EF5804871DE809E200CA79D1 /* Images */; };
 		EF58048D1DE80ECF00CA79D1 /* Posto.m in Sources */ = {isa = PBXBuildFile; fileRef = EF58048A1DE80ECF00CA79D1 /* Posto.m */; };
 		EF58048E1DE80ECF00CA79D1 /* PostoDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = EF58048C1DE80ECF00CA79D1 /* PostoDAO.m */; };
+		EF5804941DEB13EB00CA79D1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF5804931DEB13EB00CA79D1 /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		EF58048A1DE80ECF00CA79D1 /* Posto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Posto.m; sourceTree = "<group>"; };
 		EF58048B1DE80ECF00CA79D1 /* PostoDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostoDAO.h; sourceTree = "<group>"; };
 		EF58048C1DE80ECF00CA79D1 /* PostoDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostoDAO.m; sourceTree = "<group>"; };
+		EF5804931DEB13EB00CA79D1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF5804941DEB13EB00CA79D1 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +104,7 @@
 				EF5804641DE7FF9100CA79D1 /* PostosTests */,
 				EF58046F1DE7FF9100CA79D1 /* PostosUITests */,
 				EF5804461DE7FF9000CA79D1 /* Products */,
+				EF5804921DEB13EB00CA79D1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -164,6 +168,14 @@
 				EF5804721DE7FF9100CA79D1 /* Info.plist */,
 			);
 			path = PostosUITests;
+			sourceTree = "<group>";
+		};
+		EF5804921DEB13EB00CA79D1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EF5804931DEB13EB00CA79D1 /* CoreData.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

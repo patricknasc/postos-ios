@@ -1,4 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11232" systemVersion="16A323" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="Posto" syncable="YES">
+        <attribute name="bandeiraPosto" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="enderecoPosto" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latitudePosto" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="longitudePosto" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nomePosto" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="precoDiesel" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="precoEtanol" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="precoGasolinaAditivada" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="precoGasolinaComum" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Posto" positionX="-63" positionY="-18" width="128" height="180"/>
+    </elements>
 </model>

@@ -25,10 +25,10 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     
-    UIBarButtonItem *botaoAdd = [[UIBarButtonItem alloc] initWithBarButtonSystemItem: UIBarButtonSystemItemAdd target:self action:@selector(exibeFormulario)];
+    //UIBarButtonItem *botaoAdd = [[UIBarButtonItem alloc] initWithBarButtonSystemItem: UIBarButtonSystemItemAdd target:self action:@selector(exibeFormulario)];
     
-    self.navigationItem.rightBarButtonItem = botaoAdd;
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    //self.navigationItem.rightBarButtonItem = botaoAdd;
+    //self.navigationItem.leftBarButtonItem = self.editButtonItem;
     self.navigationItem.title = @"Postos de Combustíveis";
     self.postoDao = [PostoDAO postoDaoInstance];
     
