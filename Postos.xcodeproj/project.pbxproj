@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F9C29B51DEB81D4002C176D /* TempoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F9C29B41DEB81D4002C176D /* TempoViewController.m */; };
 		7FEA84E11DE9B8050047CE84 /* PostoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FEA84E01DE9B8050047CE84 /* PostoViewController.m */; };
 		EF58044A1DE7FF9000CA79D1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5804491DE7FF9000CA79D1 /* main.m */; };
 		EF58044D1DE7FF9000CA79D1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF58044C1DE7FF9000CA79D1 /* AppDelegate.m */; };
@@ -42,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7F9C29B31DEB81D4002C176D /* TempoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TempoViewController.h; sourceTree = "<group>"; };
+		7F9C29B41DEB81D4002C176D /* TempoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TempoViewController.m; sourceTree = "<group>"; };
 		7FEA84DF1DE9B8050047CE84 /* PostoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostoViewController.h; sourceTree = "<group>"; };
 		7FEA84E01DE9B8050047CE84 /* PostoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostoViewController.m; sourceTree = "<group>"; };
 		EF5804451DE7FF9000CA79D1 /* Postos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Postos.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,6 +100,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F9C29B21DEB81AF002C176D /* Tempo */ = {
+			isa = PBXGroup;
+			children = (
+				7F9C29B31DEB81D4002C176D /* TempoViewController.h */,
+				7F9C29B41DEB81D4002C176D /* TempoViewController.m */,
+			);
+			name = Tempo;
+			sourceTree = "<group>";
+		};
 		EF58043C1DE7FF9000CA79D1 = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +133,7 @@
 		EF5804471DE7FF9000CA79D1 /* Postos */ = {
 			isa = PBXGroup;
 			children = (
+				7F9C29B21DEB81AF002C176D /* Tempo */,
 				EF58044B1DE7FF9000CA79D1 /* AppDelegate.h */,
 				EF58044C1DE7FF9000CA79D1 /* AppDelegate.m */,
 				EF5804811DE808B600CA79D1 /* PostosTableViewController.h */,
@@ -322,6 +335,7 @@
 				7FEA84E11DE9B8050047CE84 /* PostoViewController.m in Sources */,
 				EF58048E1DE80ECF00CA79D1 /* PostoDAO.m in Sources */,
 				EF58044A1DE7FF9000CA79D1 /* main.m in Sources */,
+				7F9C29B51DEB81D4002C176D /* TempoViewController.m in Sources */,
 				EF5804561DE7FF9000CA79D1 /* Postos.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
