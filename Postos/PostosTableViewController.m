@@ -8,9 +8,12 @@
 
 #import "PostosTableViewController.h"
 #import "PostoTableViewCell.h"
+#import "PostoViewController.h"
 #import <CoreData/CoreData.h>
 
 @interface PostosTableViewController ()
+
+@property (strong) NSMutableArray *postos;
 
 @end
 
@@ -21,6 +24,7 @@
 - (NSManagedObjectContext *)managedObjectContext {
     NSManagedObjectContext *context = nil;
     id delegate = [[UIApplication sharedApplication] delegate];
+    
     if([delegate performSelector:@selector(managedObjectContext)]){
         context = [delegate managedObjectContext];
     }
@@ -46,41 +50,42 @@
     
     
     //TODO: Apagar! Populando temporariamente.
-    self.postos = [[NSArray alloc]init];
+    //self.postos = [[NSArray alloc]init];
     
-    Posto *p1 = [[Posto alloc] init];
-    Posto *p2 = [[Posto alloc] init];
-    
-    
-    p1.precoGasolinaComum = @"3,00";
-    p1.precoGasolinaAditivada = @"4,00";
-    p1.precoDiesel = @"2,00";
-    p1.precoEtanol = @"1,00";
-    p1.nomePosto = @"Nome do Posto 1";
-    p1.bandeiraPosto = @"esso.png";
-    p1.enderecoPosto = @"Endereço do Posto 1";
-    p1.latitudePosto = @"1,000000";
-    p1.longitudePosto = @"2,000000";
+    //Posto *p1 = [[Posto alloc] init];
+    //Posto *p2 = [[Posto alloc] init];
     
     
-    p2.precoGasolinaComum = @"3,50";
-    p2.precoGasolinaAditivada = @"4,50";
-    p2.precoDiesel = @"2,50";
-    p2.precoEtanol = @"1,50";
-    p2.nomePosto = @"Nome do Posto 2";
-    p2.bandeiraPosto = @"br.png";
-    p2.enderecoPosto = @"Endereço do Posto 2";
-    p2.latitudePosto = @"1,500000";
-    p2.longitudePosto = @"2,500000";
+//    p1.precoGasolinaComum = @"3,00";
+//    p1.precoGasolinaAditivada = @"4,00";
+//    p1.precoDiesel = @"2,00";
+//    p1.precoEtanol = @"1,00";
+//    p1.nomePosto = @"Nome do Posto 1";
+//    p1.bandeiraPosto = @"esso.png";
+//    p1.enderecoPosto = @"Endereço do Posto 1";
+//    p1.latitudePosto = @"1,000000";
+//    p1.longitudePosto = @"2,000000";
+//    
+//    
+//    p2.precoGasolinaComum = @"3,50";
+//    p2.precoGasolinaAditivada = @"4,50";
+//    p2.precoDiesel = @"2,50";
+//    p2.precoEtanol = @"1,50";
+//    p2.nomePosto = @"Nome do Posto 2";
+//    p2.bandeiraPosto = @"br.png";
+//    p2.enderecoPosto = @"Endereço do Posto 2";
+//    p2.latitudePosto = @"1,500000";
+//    p2.longitudePosto = @"2,500000";
     
-    [self addPosto: p1];
-    [self addPosto: p2];
+//    [self addPosto: p1];
+//    [self addPosto: p2];
 
     
     
 }
 
 - (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:true];
     NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Posto"];
     self.postos = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
@@ -130,13 +135,12 @@
 }
 
 
-/*
+
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     // Return NO if you do not want the specified item to be editable.
     return YES;
 }
-*/
 
 /*
 // Override to support editing the table view.
@@ -149,6 +153,29 @@
     }   
 }
 */
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    NSManagedObjectContext *context = [self managedObjectContext];
+    
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        [context deleteObject:[self.postos objectAtIndex:indexPath.row]];;
+        
+        NSError *error = nil;
+        
+        if (![context save:&error]) {
+            NSLog(@"%@ %@", error, [error localizedDescription]);
+        }
+        
+        [self.postos removeObjectAtIndex:indexPath.row];
+        [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        
+        
+    }
+    
+    
+    
+}
 
 /*
 // Override to support rearranging the table view.
@@ -175,20 +202,20 @@
 */
 
 
--(void) exibeFormulario {
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
-//    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-//    ViewController *form = [storyboard instantiateViewControllerWithIdentifier:@"FormPosto"];
-//    
-//    if (self.postoSelecionado){
-//        form.posto = self.postoSelecionado;
-//    }
-//    
-//    self.postoSelecionado = nil;
-//    
-//    [self.navigationController pushViewController:form animated:YES];
+    if ([[segue identifier] isEqualToString:@"UpdatePosto"]) {
+        NSManagedObjectModel *SelectedPosto = [self.postos objectAtIndex:[[self.tableView indexPathForSelectedRow] row]];
+        PostoViewController *PostoAddView = segue.destinationViewController;
+        //PostoAddView.posto = SelectedPosto;
+    }
+    
+    
+    
+    
     
 }
+
 
 
 + (void) logPosto:(Posto *)posto {

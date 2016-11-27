@@ -13,7 +13,7 @@
 
 @interface PostosTableViewController : UITableViewController
 
-@property NSArray *postos;
+//@property NSArray *postos;
 @property PostoDAO *postoDao;
 @property Posto *postoSelecionado;
 
