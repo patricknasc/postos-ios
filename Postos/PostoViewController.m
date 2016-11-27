@@ -32,6 +32,9 @@
     // Do any additional setup after loading the view.
     
     if(self.posto){
+        
+        self.navigationItem.title = @"Atualizar";
+        
         [self.preco_gasolina_comum setText:[self.posto valueForKey:@"precoGasolinaComum"]];
         [self.preco_gasolina_aditivada setText:[self.posto valueForKey:@"precoGasolinaAditivada"]];
         [self.preco_diesel setText:[self.posto valueForKey:@"precoDiesel"]];
@@ -45,6 +48,8 @@
         [self.longitude_posto setText:[self.posto valueForKey:@"longitudePosto"]];
         
         //inicializar a logo do posto, caso não tenha nada, usar "vazio.png"
+    } else {
+        self.navigationItem.title = @"Cadastrar";
     }
 }
 
