@@ -117,19 +117,25 @@
     static NSString *CellIdentifier = @"CellIdentifier";
     PostoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    int row = (int)[indexPath row];
-    NSLog(@">>%@", _postos[row]);
-    Posto *p = (Posto *)_postos[row];
+    //int row = (int)[indexPath row];
+    //NSLog(@">>%@", _postos[row]);
+    //Posto *p = (Posto *)_postos[row];
     
-    cell.LblPrecoGasolinaComum.text = p.precoGasolinaComum;
-    cell.LblPrecoGasolinaAditivada.text = p.precoGasolinaAditivada;
-    cell.LblPrecoDiesel.text = p.precoDiesel;
-    cell.LblPrecoEtanol.text = p.precoEtanol;
-    cell.LblNomePosto.text = p.nomePosto;
-    NSLog(@">>%@", p.nomePosto);
-    cell.LblEnderecoPosto.text = p.enderecoPosto;
-    cell.ImgBandeiraPosto.image = [UIImage imageNamed: [NSString stringWithFormat:@"%@/%@", @"Images/", p.bandeiraPosto]];
-    NSLog(@">>%@", p.bandeiraPosto);
+    NSManagedObjectModel *posto = [self.postos objectAtIndex:indexPath.row];
+    [cell.LblPrecoGasolinaComum setText:[NSString stringWithFormat:@"%@", [posto valueForKey:@"precoGasolinaComum"]]];
+    [cell.LblPrecoGasolinaAditivada setText:[NSString stringWithFormat:@"%@", [posto valueForKey:@"precoGasolinaAditivada"]]];
+    [cell.LblPrecoDiesel setText:[NSString stringWithFormat:@"%@", [posto valueForKey:@"precoDiesel"]]];
+    [cell.LblPrecoEtanol setText:[NSString stringWithFormat:@"%@", [posto valueForKey:@"precoEtanol"]]];
+    
+    [cell.LblNomePosto setText:[NSString stringWithFormat:@"%@", [posto valueForKey:@"nomePosto"]]];
+    [cell.LblEnderecoPosto setText:[NSString stringWithFormat:@"%@", [posto valueForKey:@"enderecoPosto"]]];
+    
+    cell.ImgBandeiraPosto.image = [UIImage imageNamed: [NSString stringWithFormat:@"%@/%@%@", @"Images/", [posto valueForKey:@"bandeiraPosto"], @".png"]];
+    
+  
+   
+//    cell.ImgBandeiraPosto.image = [UIImage imageNamed: [NSString stringWithFormat:@"%@/%@", @"Images/", p.bandeiraPosto]];
+//    NSLog(@">>%@", p.bandeiraPosto);
     
     return cell;
 }

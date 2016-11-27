@@ -28,6 +28,8 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *longitude_posto;
 
+@property (strong) NSManagedObjectModel * posto;
+
 - (IBAction)saveData:(id)sender;
 
 - (IBAction)DismissKeyboard:(id)sender;
