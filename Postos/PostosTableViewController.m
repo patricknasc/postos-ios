@@ -8,12 +8,24 @@
 
 #import "PostosTableViewController.h"
 #import "PostoTableViewCell.h"
+#import <CoreData/CoreData.h>
 
 @interface PostosTableViewController ()
 
 @end
 
 @implementation PostosTableViewController
+
+
+
+- (NSManagedObjectContext *)managedObjectContext {
+    NSManagedObjectContext *context = nil;
+    id delegate = [[UIApplication sharedApplication] delegate];
+    if([delegate performSelector:@selector(managedObjectContext)]){
+        context = [delegate managedObjectContext];
+    }
+    return context;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -67,6 +79,15 @@
     
     
 }
+
+- (void)viewDidAppear:(BOOL)animated{
+    NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Posto"];
+    self.postos = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
+    [self.tableView reloadData];
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
