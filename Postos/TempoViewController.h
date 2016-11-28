@@ -18,4 +18,6 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *previsao_d1;
 
+@property (strong) NSManagedObjectModel * posto;
+
 @end

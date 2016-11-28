@@ -10,6 +10,7 @@
 #import "PostoTableViewCell.h"
 #import "PostoViewController.h"
 #import "MapViewController.h"
+#import "TempoViewController.h"
 #import <CoreData/CoreData.h>
 
 @interface PostosTableViewController ()
@@ -164,9 +165,11 @@
         NSManagedObjectModel *selectedPosto = [self.postos objectAtIndex:[[self.tableView indexPathForSelectedRow] row]];
         MapViewController *postoMapView = segue.destinationViewController;
         postoMapView.posto = selectedPosto;
+    } else if ([[segue identifier] isEqualToString:@"GoToTempo"]) {
+        NSManagedObjectModel *selectedPosto = [self.postos objectAtIndex:[[self.tableView indexPathForSelectedRow] row]];
+        TempoViewController *postoTempoView = segue.destinationViewController;
+        postoTempoView.posto = selectedPosto;
     }
-    
-    
 }
 
 

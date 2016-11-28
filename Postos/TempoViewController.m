@@ -7,6 +7,7 @@
 //
 
 #import "TempoViewController.h"
+#import <CoreData/CoreData.h>
 
 @interface TempoViewController ()
 
@@ -14,14 +15,42 @@
 
 @implementation TempoViewController
 
+@synthesize posto;
+
+- (NSManagedObjectContext *)managedObjectContext {
+    NSManagedObjectContext *context = nil;
+    id delegate = [[UIApplication sharedApplication] delegate];
+    
+    if([delegate performSelector:@selector(managedObjectContext)]){
+        context = [delegate managedObjectContext];
+    }
+    return context;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    NSString *latitude = @"-15.794229";
+    
+    NSString *longitude = @"-47.882166";
+    
+    NSString *latitudeCadastro = [self.posto valueForKey:@"latitudePosto"];
+    
+    NSString *longitudeCadastro = [self.posto valueForKey:@"longitudePosto"];
+    
+    if (latitudeCadastro||longitudeCadastro) {
+        latitude = latitudeCadastro;
+        longitude = longitudeCadastro;
+    }
+    
     self.navigationItem.title = @"Previsão do Tempo";
     
-    NSString *urlStringCondicao = [NSString stringWithFormat:@"https://api.wunderground.com/api/d47ade75cf6c5a32/conditions/lang:BR/q/-26.825137,-49.269520.json"];
+    NSString *urlStringCondicao = [NSString stringWithFormat:@"https://api.wunderground.com/api/d47ade75cf6c5a32/conditions/lang:BR/q/%@,%@.json", latitude, longitude];
     
-    NSString *urlStringPrevisao = [NSString stringWithFormat:@"https://api.wunderground.com/api/d47ade75cf6c5a32/forecast/lang:BR/q/-26.825137,-49.269520.json"];
+    NSString *urlStringPrevisao = [NSString stringWithFormat:@"https://api.wunderground.com/api/d47ade75cf6c5a32/forecast/lang:BR/q/%@,%@.json", latitude, longitude];
     NSError *error;
+    
+    NSLog(@"%@", urlStringPrevisao);
     
     NSURLResponse *response;
     
